@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- =========================================================================
+     VARIABLES À PERSONNALISER (présentes dans ce fichier)
+     [[NOM_ENTREPRISE]] [[SLOGAN]] [[TELEPHONE]] [[TELEPHONE_INTL]] [[EMAIL]]
+     [[ADRESSE]] [[CODE_POSTAL]] [[VILLE]] [[DEPARTEMENT]] [[ZONE_INTERVENTION]]
+     [[NB_PROJETS]] [[NOTE_GOOGLE]] [[URL_FACEBOOK]] [[URL_INSTAGRAM]] [[URL_SITE]]
+     -> Voir PERSONNALISATION.md
+     ========================================================================= -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Réalisations — Paysagiste à [[VILLE]] | [[NOM_ENTREPRISE]]</title>
+  <meta name="description" content="Découvrez nos réalisations de jardins, terrasses, éclairage et clôtures à [[VILLE]] et dans [[ZONE_INTERVENTION]]. +[[NB_PROJETS]] projets paysagers réalisés par [[NOM_ENTREPRISE]].">
+  <link rel="canonical" href="[[URL_SITE]]/realisations.html">
+  <meta name="theme-color" content="#1F3A2D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Réalisations — [[NOM_ENTREPRISE]], paysagiste à [[VILLE]]">
+  <meta property="og:description" content="Galerie de jardins, terrasses et aménagements extérieurs réalisés à [[VILLE]] ([[DEPARTEMENT]]).">
+  <meta property="og:image" content="[[URL_SITE]]/images/og-image.svg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F3A2D'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23C9A86A' font-family='serif'>P</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- HEADER (variante opaque) -->
+  <header class="header header--solid">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="[[NOM_ENTREPRISE]] — accueil">
+        <span class="brand__mark"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+        <span class="brand__name">[[NOM_ENTREPRISE]]<span class="brand__sub">Paysagiste · [[VILLE]]</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav__link" href="realisations.html" aria-current="page">Réalisations</a>
+        <a class="nav__link" href="index.html#processus">Notre méthode</a>
+        <a class="nav__link" href="index.html#simulateur">Devis en ligne</a>
+        <a class="nav__link" href="index.html#temoignages">Avis clients</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="header__cta">
+        <a class="header__tel" href="tel:[[TELEPHONE_INTL]]"><i class="fa-solid fa-phone" aria-hidden="true"></i> [[TELEPHONE]]</a>
+        <a class="btn btn--or" href="index.html#simulateur" data-magnetic="0.25">Devis gratuit</a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="realisations.html">Réalisations <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#processus">Notre méthode <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#simulateur">Devis en ligne <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#temoignages">Avis clients <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="btn btn--or" href="index.html#simulateur">Obtenir mon devis gratuit</a>
+  </nav>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Réalisations">
+      <div class="container">
+        <p class="page-hero__crumb"><a href="index.html">Accueil</a> · Réalisations</p>
+        <h1 class="h-display" data-reveal>Nos plus belles réalisations.</h1>
+        <p class="lead" data-reveal data-reveal-delay="120">Plus de [[NB_PROJETS]] jardins, terrasses et extérieurs transformés à [[VILLE]] et dans [[ZONE_INTERVENTION]]. Filtrez par type de projet et laissez-vous inspirer.</p>
+      </div>
+    </section>
+
+    <!-- GALERIE FILTRABLE -->
+    <section class="section section--cream" aria-label="Galerie">
+      <div class="container">
+        <div class="filters" data-filters role="group" aria-label="Filtrer les réalisations">
+          <button class="filter-btn is-active" data-filter="tout" aria-pressed="true">Tout voir</button>
+          <button class="filter-btn" data-filter="jardin" aria-pressed="false">Jardins</button>
+          <button class="filter-btn" data-filter="terrasse" aria-pressed="false">Terrasses</button>
+          <button class="filter-btn" data-filter="eclairage" aria-pressed="false">Éclairage</button>
+          <button class="filter-btn" data-filter="cloture" aria-pressed="false">Clôtures</button>
+        </div>
+
+        <div class="gallery">
+          <button class="gallery__item" data-category="jardin"    data-lightbox="images/galerie-1.svg"  data-caption="Jardin paysager — [[VILLE]]" data-reveal><img src="images/galerie-1.svg"  alt="Jardin paysager complet" loading="lazy"><span class="gallery__cap">Jardin paysager</span></button>
+          <button class="gallery__item" data-category="terrasse"  data-lightbox="images/galerie-2.svg"  data-caption="Terrasse en bois" data-reveal><img src="images/galerie-2.svg"  alt="Terrasse en bois exotique" loading="lazy"><span class="gallery__cap">Terrasse bois</span></button>
+          <button class="gallery__item" data-category="eclairage" data-lightbox="images/galerie-3.svg"  data-caption="Éclairage extérieur" data-reveal><img src="images/galerie-3.svg"  alt="Éclairage extérieur d'un jardin" loading="lazy"><span class="gallery__cap">Éclairage extérieur</span></button>
+          <button class="gallery__item" data-category="jardin"    data-lightbox="images/galerie-4.svg"  data-caption="Massif & plantations" data-reveal><img src="images/galerie-4.svg"  alt="Massif et plantations" loading="lazy"><span class="gallery__cap">Massif & plantations</span></button>
+          <button class="gallery__item" data-category="jardin"    data-lightbox="images/galerie-5.svg"  data-caption="Bassin naturel" data-reveal><img src="images/galerie-5.svg"  alt="Bassin naturel paysager" loading="lazy"><span class="gallery__cap">Bassin naturel</span></button>
+          <button class="gallery__item" data-category="terrasse"  data-lightbox="images/galerie-6.svg"  data-caption="Terrasse dallage" data-reveal><img src="images/galerie-6.svg"  alt="Terrasse en dallage" loading="lazy"><span class="gallery__cap">Terrasse dallage</span></button>
+          <button class="gallery__item" data-category="cloture"   data-lightbox="images/galerie-7.svg"  data-caption="Allée & clôture" data-reveal><img src="images/galerie-7.svg"  alt="Allée et clôture" loading="lazy"><span class="gallery__cap">Allée & clôture</span></button>
+          <button class="gallery__item" data-category="eclairage" data-lightbox="images/galerie-8.svg"  data-caption="Mise en lumière" data-reveal><img src="images/galerie-8.svg"  alt="Mise en lumière du jardin" loading="lazy"><span class="gallery__cap">Mise en lumière</span></button>
+          <button class="gallery__item" data-category="terrasse"  data-lightbox="images/galerie-9.svg"  data-caption="Pergola & terrasse" data-reveal><img src="images/galerie-9.svg"  alt="Pergola et terrasse" loading="lazy"><span class="gallery__cap">Pergola & terrasse</span></button>
+          <button class="gallery__item" data-category="jardin"    data-lightbox="images/galerie-10.svg" data-caption="Gazon & massifs" data-reveal><img src="images/galerie-10.svg" alt="Gazon et massifs" loading="lazy"><span class="gallery__cap">Gazon & massifs</span></button>
+          <button class="gallery__item" data-category="jardin"    data-lightbox="images/galerie-11.svg" data-caption="Piscine paysagée" data-reveal><img src="images/galerie-11.svg" alt="Piscine paysagée intégrée au jardin" loading="lazy"><span class="gallery__cap">Piscine paysagée</span></button>
+          <button class="gallery__item" data-category="cloture"   data-lightbox="images/galerie-12.svg" data-caption="Clôture & portail" data-reveal><img src="images/galerie-12.svg" alt="Clôture et portail" loading="lazy"><span class="gallery__cap">Clôture & portail</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cream cta-final" style="padding-top:0" aria-label="Demander un devis">
+      <div class="container">
+        <div class="cta-band" data-reveal="scale">
+          <div>
+            <span class="eyebrow" style="color:var(--c-or-clair)">Votre projet</span>
+            <h2>Et si le prochain<br>c'était le vôtre ?</h2>
+            <p class="lead">Parlons de votre extérieur. Estimez votre budget en ligne ou demandez un rappel — c'est gratuit et sans engagement.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start">
+            <a class="btn btn--or btn--lg" href="index.html#simulateur"><i class="fa-solid fa-calculator"></i> Estimer mon projet</a>
+            <a class="btn btn--ghost btn--lg" href="contact.html"><i class="fa-solid fa-phone"></i> Être rappelé(e)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about-col">
+          <a class="brand" href="index.html"><span class="brand__mark"><i class="fa-solid fa-leaf"></i></span><span class="brand__name">[[NOM_ENTREPRISE]]</span></a>
+          <p class="footer__about">[[SLOGAN]] Paysagiste à [[VILLE]], nous créons des jardins et des extérieurs d'exception dans [[ZONE_INTERVENTION]].</p>
+          <div class="footer__social">
+            <a href="[[URL_FACEBOOK]]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="[[URL_INSTAGRAM]]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:[[EMAIL]]" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="index.html#processus">Notre méthode</a></li>
+            <li><a href="index.html#simulateur">Devis en ligne</a></li>
+            <li><a href="index.html#temoignages">Avis clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__contact">
+            <li><i class="fa-solid fa-location-dot"></i> <span>[[ADRESSE]]<br>[[CODE_POSTAL]] [[VILLE]]</span></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:[[TELEPHONE_INTL]]">[[TELEPHONE]]</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:[[EMAIL]]">[[EMAIL]]</a></li>
+            <li><i class="fa-solid fa-map"></i> <span>[[ZONE_INTERVENTION]]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> [[NOM_ENTREPRISE]] — Tous droits réservés.</span>
+        <span><a href="contact.html">Mentions légales</a> · Paysagiste à [[VILLE]] ([[DEPARTEMENT]])</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALE / LIGHTBOX -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo du projet" tabindex="-1">
+    <div class="modal__dialog">
+      <button class="modal__close" aria-label="Fermer la fenêtre"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal__body"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

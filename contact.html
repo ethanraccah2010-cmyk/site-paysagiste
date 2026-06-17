@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- =========================================================================
+     VARIABLES À PERSONNALISER (présentes dans ce fichier)
+     [[NOM_ENTREPRISE]] [[SLOGAN]] [[TELEPHONE]] [[TELEPHONE_INTL]] [[EMAIL]]
+     [[ADRESSE]] [[CODE_POSTAL]] [[VILLE]] [[DEPARTEMENT]] [[ZONE_INTERVENTION]]
+     [[NOTE_GOOGLE]] [[URL_FACEBOOK]] [[URL_INSTAGRAM]] [[URL_SITE]] [[FORMSPREE_ENDPOINT]]
+     -> Voir PERSONNALISATION.md. La carte Google Maps utilise [[ADRESSE]] / [[VILLE]].
+     ========================================================================= -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact — Paysagiste à [[VILLE]] | [[NOM_ENTREPRISE]]</title>
+  <meta name="description" content="Contactez [[NOM_ENTREPRISE]], paysagiste à [[VILLE]] ([[DEPARTEMENT]]). Devis gratuit sous 24h. Téléphone [[TELEPHONE]], email [[EMAIL]]. Intervention dans [[ZONE_INTERVENTION]].">
+  <link rel="canonical" href="[[URL_SITE]]/contact.html">
+  <meta name="theme-color" content="#1F3A2D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — [[NOM_ENTREPRISE]], paysagiste à [[VILLE]]">
+  <meta property="og:description" content="Demandez votre devis gratuit. Paysagiste à [[VILLE]] et dans [[ZONE_INTERVENTION]].">
+  <meta property="og:image" content="[[URL_SITE]]/images/og-image.svg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F3A2D'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23C9A86A' font-family='serif'>P</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Données structurées (page contact) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "[[NOM_ENTREPRISE]]",
+    "url": "[[URL_SITE]]",
+    "telephone": "[[TELEPHONE_INTL]]",
+    "email": "[[EMAIL]]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[[ADRESSE]]",
+      "postalCode": "[[CODE_POSTAL]]",
+      "addressLocality": "[[VILLE]]",
+      "addressRegion": "[[DEPARTEMENT]]",
+      "addressCountry": "FR"
+    },
+    "areaServed": "[[ZONE_INTERVENTION]]",
+    "openingHours": "Mo-Fr 08:00-18:00"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- HEADER -->
+  <header class="header header--solid">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="[[NOM_ENTREPRISE]] — accueil">
+        <span class="brand__mark"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+        <span class="brand__name">[[NOM_ENTREPRISE]]<span class="brand__sub">Paysagiste · [[VILLE]]</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav__link" href="realisations.html">Réalisations</a>
+        <a class="nav__link" href="index.html#processus">Notre méthode</a>
+        <a class="nav__link" href="index.html#simulateur">Devis en ligne</a>
+        <a class="nav__link" href="index.html#temoignages">Avis clients</a>
+        <a class="nav__link" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header__cta">
+        <a class="header__tel" href="tel:[[TELEPHONE_INTL]]"><i class="fa-solid fa-phone" aria-hidden="true"></i> [[TELEPHONE]]</a>
+        <a class="btn btn--or" href="#form" data-magnetic="0.25">Devis gratuit</a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="realisations.html">Réalisations <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#processus">Notre méthode <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#simulateur">Devis en ligne <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="index.html#temoignages">Avis clients <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="btn btn--or" href="#form">Obtenir mon devis gratuit</a>
+  </nav>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Contact">
+      <div class="container">
+        <p class="page-hero__crumb"><a href="index.html">Accueil</a> · Contact</p>
+        <h1 class="h-display" data-reveal>Parlons de votre jardin.</h1>
+        <p class="lead" data-reveal data-reveal-delay="120">Une question, une idée, un projet ? Écrivez-nous ou appelez-nous : nous vous répondons sous 24h, avec le sourire.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--cream" aria-label="Coordonnées et formulaire">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Infos -->
+          <div class="contact-info">
+            <div class="contact-card" data-reveal>
+              <span class="contact-card__icon"><i class="fa-solid fa-phone"></i></span>
+              <div><h3>Téléphone</h3><p><a href="tel:[[TELEPHONE_INTL]]">[[TELEPHONE]]</a><br><small>Du lundi au vendredi, 8h–18h</small></p></div>
+            </div>
+            <div class="contact-card" data-reveal data-reveal-delay="80">
+              <span class="contact-card__icon"><i class="fa-solid fa-envelope"></i></span>
+              <div><h3>Email</h3><p><a href="mailto:[[EMAIL]]">[[EMAIL]]</a><br><small>Réponse sous 24h ouvrées</small></p></div>
+            </div>
+            <div class="contact-card" data-reveal data-reveal-delay="160">
+              <span class="contact-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div><h3>Adresse</h3><p>[[ADRESSE]]<br>[[CODE_POSTAL]] [[VILLE]] — [[DEPARTEMENT]]</p></div>
+            </div>
+            <div class="contact-card" data-reveal data-reveal-delay="240" style="flex-direction:column;align-items:flex-start">
+              <div style="display:flex;gap:1.1rem;align-items:flex-start">
+                <span class="contact-card__icon"><i class="fa-solid fa-map"></i></span>
+                <div><h3>Zones d'intervention</h3><p>[[ZONE_INTERVENTION]]</p></div>
+              </div>
+              <div class="contact-zones" data-zones aria-label="Communes desservies"></div>
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <div id="form" class="form-panel" data-reveal="right">
+            <span class="eyebrow">Demande de devis</span>
+            <h2 style="margin:.4rem 0 1.4rem;font-size:clamp(1.6rem,3vw,2.2rem)">Recevez votre devis gratuit</h2>
+            <form class="js-form" action="[[FORMSPREE_ENDPOINT]]" method="POST" novalidate>
+              <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="hidden" name="_subject" value="Nouvelle demande de contact — [[NOM_ENTREPRISE]]">
+              <input type="hidden" name="provenance" value="Page contact">
+              <div class="field-row">
+                <div class="field"><label for="c-prenom">Prénom *</label><input id="c-prenom" name="prénom" required></div>
+                <div class="field"><label for="c-nom">Nom</label><input id="c-nom" name="nom"></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="c-tel">Téléphone *</label><input id="c-tel" name="téléphone" type="tel" required></div>
+                <div class="field"><label for="c-email">Email *</label><input id="c-email" name="email" type="email" required></div>
+              </div>
+              <div class="field"><label for="c-ville">Commune du projet</label><input id="c-ville" name="commune" placeholder="Ex. : [[VILLE]]"></div>
+              <div class="field"><label for="c-msg">Votre projet *</label><textarea id="c-msg" name="message" rows="4" required placeholder="Décrivez votre extérieur, vos envies, votre budget, vos délais…"></textarea></div>
+              <button type="submit" class="btn btn--or btn--block btn--lg"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+              <p style="font-size:.78rem;color:var(--c-encre-2);margin-top:.8rem">* Champs obligatoires. Vos informations restent strictement confidentielles.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTE GOOGLE MAPS -->
+    <section class="section section--soft" style="padding-top:0" aria-label="Localisation">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Nous trouver</span>
+          <h2>Au cœur de [[VILLE]].</h2>
+        </div>
+        <!-- La carte recherche [[ADRESSE]], [[CODE_POSTAL]] [[VILLE]].
+             Pour une carte « pro » avec clé API, remplacez par un embed Google Maps personnalisé. -->
+        <div class="map-embed" data-reveal>
+          <iframe
+            title="Localisation de [[NOM_ENTREPRISE]] à [[VILLE]]"
+            src="https://www.google.com/maps?q=[[ADRESSE]],+[[CODE_POSTAL]]+[[VILLE]]&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about-col">
+          <a class="brand" href="index.html"><span class="brand__mark"><i class="fa-solid fa-leaf"></i></span><span class="brand__name">[[NOM_ENTREPRISE]]</span></a>
+          <p class="footer__about">[[SLOGAN]] Paysagiste à [[VILLE]], nous créons des jardins et des extérieurs d'exception dans [[ZONE_INTERVENTION]].</p>
+          <div class="footer__social">
+            <a href="[[URL_FACEBOOK]]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="[[URL_INSTAGRAM]]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:[[EMAIL]]" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="index.html#processus">Notre méthode</a></li>
+            <li><a href="index.html#simulateur">Devis en ligne</a></li>
+            <li><a href="index.html#temoignages">Avis clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__contact">
+            <li><i class="fa-solid fa-location-dot"></i> <span>[[ADRESSE]]<br>[[CODE_POSTAL]] [[VILLE]]</span></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:[[TELEPHONE_INTL]]">[[TELEPHONE]]</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:[[EMAIL]]">[[EMAIL]]</a></li>
+            <li><i class="fa-solid fa-map"></i> <span>[[ZONE_INTERVENTION]]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> [[NOM_ENTREPRISE]] — Tous droits réservés.</span>
+        <span><a href="contact.html">Mentions légales</a> · Paysagiste à [[VILLE]] ([[DEPARTEMENT]])</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

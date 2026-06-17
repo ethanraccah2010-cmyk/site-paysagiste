@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- =========================================================================
+     VARIABLES À PERSONNALISER (présentes dans ce fichier)
+     -------------------------------------------------------------------------
+     [[NOM_ENTREPRISE]] [[SLOGAN]] [[TELEPHONE]] [[TELEPHONE_INTL]] [[EMAIL]]
+     [[ADRESSE]] [[CODE_POSTAL]] [[VILLE]] [[DEPARTEMENT]] [[ZONE_INTERVENTION]]
+     [[NOTE_GOOGLE]] [[NB_AVIS]] [[NB_PROJETS]] [[ANNEES_EXP]]
+     [[URL_FACEBOOK]] [[URL_INSTAGRAM]] [[URL_SITE]] [[FORMSPREE_ENDPOINT]]
+     -> Voir PERSONNALISATION.md pour la procédure complète (find / replace).
+     ========================================================================= -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>[[NOM_ENTREPRISE]] — Paysagiste & aménagement extérieur à [[VILLE]] ([[DEPARTEMENT]])</title>
+  <meta name="description" content="[[NOM_ENTREPRISE]], paysagiste à [[VILLE]] et dans [[ZONE_INTERVENTION]]. Création de jardins, terrasses, éclairage et arrosage. Devis gratuit sous 24h. +[[NB_PROJETS]] projets réalisés, note [[NOTE_GOOGLE]]/5.">
+  <link rel="canonical" href="[[URL_SITE]]">
+  <meta name="theme-color" content="#1F3A2D">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[[NOM_ENTREPRISE]] — Transformez votre jardin en un espace d'exception">
+  <meta property="og:description" content="Paysagiste premium à [[VILLE]] ([[DEPARTEMENT]]). Jardins, terrasses, éclairage. Devis gratuit sous 24h.">
+  <meta property="og:image" content="[[URL_SITE]]/images/og-image.svg">
+  <meta property="og:url" content="[[URL_SITE]]">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (placeholder en SVG inline) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F3A2D'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23C9A86A' font-family='serif'>P</text></svg>">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <!-- Icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Données structurées -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "[[NOM_ENTREPRISE]]",
+    "description": "Paysagiste et aménagement extérieur à [[VILLE]] : jardins, terrasses, éclairage, arrosage automatique.",
+    "image": "[[URL_SITE]]/images/og-image.svg",
+    "url": "[[URL_SITE]]",
+    "telephone": "[[TELEPHONE_INTL]]",
+    "email": "[[EMAIL]]",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[[ADRESSE]]",
+      "postalCode": "[[CODE_POSTAL]]",
+      "addressLocality": "[[VILLE]]",
+      "addressRegion": "[[DEPARTEMENT]]",
+      "addressCountry": "FR"
+    },
+    "areaServed": "[[ZONE_INTERVENTION]]",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "[[NOTE_GOOGLE]]",
+      "reviewCount": "[[NB_AVIS]]",
+      "bestRating": "5"
+    },
+    "sameAs": ["[[URL_FACEBOOK]]", "[[URL_INSTAGRAM]]"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="[[NOM_ENTREPRISE]] — accueil">
+        <span class="brand__mark"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+        <span class="brand__name">[[NOM_ENTREPRISE]]<span class="brand__sub">Paysagiste · [[VILLE]]</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav__link" href="#realisations">Réalisations</a>
+        <a class="nav__link" href="#processus">Notre méthode</a>
+        <a class="nav__link" href="#simulateur">Devis en ligne</a>
+        <a class="nav__link" href="#temoignages">Avis clients</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header__cta">
+        <a class="header__tel" href="tel:[[TELEPHONE_INTL]]"><i class="fa-solid fa-phone" aria-hidden="true"></i> [[TELEPHONE]]</a>
+        <a class="btn btn--or" href="#simulateur" data-magnetic="0.25">Devis gratuit</a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="#realisations">Réalisations <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#processus">Notre méthode <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#simulateur">Devis en ligne <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#temoignages">Avis clients <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="btn btn--or" href="#simulateur">Obtenir mon devis gratuit</a>
+    <div class="mobile-menu__contact">
+      <a href="tel:[[TELEPHONE_INTL]]"><i class="fa-solid fa-phone"></i> [[TELEPHONE]]</a><br>
+      <a href="mailto:[[EMAIL]]"><i class="fa-solid fa-envelope"></i> [[EMAIL]]</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" aria-label="Présentation">
+      <div class="hero__media">
+        <!-- Remplacez videos/drone.mp4 par votre vidéo drone. Le poster s'affiche
+             si la vidéo est absente ou tant qu'elle se charge. -->
+        <video autoplay muted loop playsinline poster="images/hero-poster.svg" aria-hidden="true">
+          <source src="videos/drone.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <canvas id="hero-leaves" class="hero__leaves" aria-hidden="true"></canvas>
+
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <h1 class="h-display" data-reveal>Transformez votre jardin<br>en un <em>espace d'exception</em>.</h1>
+          <p class="hero__sub" data-reveal data-reveal-delay="120">[[SLOGAN]] — création de jardins, terrasses et extérieurs sur-mesure à [[VILLE]] et dans [[ZONE_INTERVENTION]].</p>
+          <div class="hero__actions" data-reveal data-reveal-delay="220">
+            <a class="btn btn--or btn--lg" href="#simulateur" data-magnetic="0.2"><i class="fa-solid fa-calculator"></i> Obtenir mon devis gratuit</a>
+            <a class="btn btn--ghost btn--lg" href="#realisations">Voir nos réalisations</a>
+          </div>
+
+          <!-- Barre de réassurance + compteurs animés -->
+          <div class="reassure" data-reveal data-reveal-delay="320">
+            <div class="reassure__item">
+              <span class="reassure__icon"><i class="fa-solid fa-star" aria-hidden="true"></i></span>
+              <span>
+                <span class="reassure__num"><span data-count="[[NOTE_GOOGLE]]" data-decimals="1">[[NOTE_GOOGLE]]</span>/5</span>
+                <span class="reassure__label">sur Google · [[NB_AVIS]] avis</span>
+              </span>
+            </div>
+            <div class="reassure__item">
+              <span class="reassure__icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+              <span>
+                <span class="reassure__num"><span data-count="[[NB_PROJETS]]" data-suffix="+">[[NB_PROJETS]]+</span></span>
+                <span class="reassure__label">projets réalisés</span>
+              </span>
+            </div>
+            <div class="reassure__item">
+              <span class="reassure__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+              <span>
+                <span class="reassure__num">24h</span>
+                <span class="reassure__label">Devis gratuit & rapide</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#avant-apres" aria-label="Découvrir">
+        <span>Découvrir</span>
+        <span class="mouse" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============================ AVANT / APRÈS ============================ -->
+    <section class="section section--cream" id="avant-apres" aria-label="Avant / Après">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow eyebrow--center">La transformation</span>
+          <h2>Le même extérieur,<br>une toute autre vie.</h2>
+          <p class="lead">Faites glisser le curseur et imaginez le potentiel de votre jardin. Voici ce que change un véritable savoir-faire.</p>
+        </div>
+
+        <div class="ba-grid">
+          <div data-reveal="left">
+            <div class="ba" aria-label="Avant après — jardin">
+              <div class="ba__img ba__img--after"><img src="images/apres-1.svg" alt="Jardin paysager terminé : pelouse, massifs et arbres" loading="lazy"></div>
+              <div class="ba__img ba__img--before"><img src="images/avant-1.svg" alt="Terrain nu avant aménagement" loading="lazy"></div>
+              <span class="ba__label ba__label--before">Avant</span>
+              <span class="ba__label ba__label--after">Après</span>
+              <div class="ba__handle"><span class="ba__grip"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+            <p class="ba__caption">Création complète d'un jardin<span>Terrain nu → jardin paysager en 5 semaines</span></p>
+          </div>
+
+          <div data-reveal="right">
+            <div class="ba" aria-label="Avant après — terrasse">
+              <div class="ba__img ba__img--after"><img src="images/apres-2.svg" alt="Terrasse premium en bois et pierre" loading="lazy"></div>
+              <div class="ba__img ba__img--before"><img src="images/avant-2.svg" alt="Ancienne terrasse usée avant rénovation" loading="lazy"></div>
+              <span class="ba__label ba__label--before">Avant</span>
+              <span class="ba__label ba__label--after">Après</span>
+              <div class="ba__handle"><span class="ba__grip"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+            <p class="ba__caption">Rénovation d'une terrasse<span>Vieille dalle → terrasse premium</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SAVOIR-FAIRE / SERVICES ============================ -->
+    <section class="section section--soft" id="savoir-faire" aria-label="Nos savoir-faire">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Nos savoir-faire</span>
+          <h2>Tout votre extérieur,<br>par un seul artisan paysagiste.</h2>
+        </div>
+        <div class="real-grid" data-reveal-stagger="80" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+          <article class="contact-card" data-reveal style="flex-direction:column;align-items:flex-start;gap:1rem;background:var(--c-blanc)">
+            <span class="contact-card__icon"><i class="fa-solid fa-tree"></i></span>
+            <h3>Création de jardins</h3>
+            <p>Plantations, massifs, gazon et engazonnement pour un jardin vivant toute l'année.</p>
+          </article>
+          <article class="contact-card" data-reveal style="flex-direction:column;align-items:flex-start;gap:1rem;background:var(--c-blanc)">
+            <span class="contact-card__icon"><i class="fa-solid fa-square"></i></span>
+            <h3>Terrasses & allées</h3>
+            <p>Bois, pierre naturelle, dallage grand format : des surfaces durables et élégantes.</p>
+          </article>
+          <article class="contact-card" data-reveal style="flex-direction:column;align-items:flex-start;gap:1rem;background:var(--c-blanc)">
+            <span class="contact-card__icon"><i class="fa-solid fa-lightbulb"></i></span>
+            <h3>Éclairage extérieur</h3>
+            <p>Mise en lumière des allées, arbres et façades pour des soirées magiques.</p>
+          </article>
+          <article class="contact-card" data-reveal style="flex-direction:column;align-items:flex-start;gap:1rem;background:var(--c-blanc)">
+            <span class="contact-card__icon"><i class="fa-solid fa-droplet"></i></span>
+            <h3>Arrosage & clôtures</h3>
+            <p>Arrosage automatique enterré, clôtures et portails : un jardin sans contrainte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ RÉALISATIONS ============================ -->
+    <section class="section section--cream" id="realisations" aria-label="Nos réalisations">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Nos réalisations</span>
+          <h2>Des projets qui parlent<br>mieux que les mots.</h2>
+          <p class="lead">Survolez une carte, puis cliquez pour découvrir le chantier, le budget et l'avis du client.</p>
+        </div>
+
+        <div class="real-grid">
+          <!-- Carte 1 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-1" data-reveal>
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Jardin</span>
+              <img src="images/realisation-1.svg" alt="Jardin contemporain avec terrasse et massifs" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Jardin contemporain</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 320 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 5 semaines</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 28–34 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+
+          <!-- Carte 2 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-2" data-reveal data-reveal-delay="90">
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Terrasse</span>
+              <img src="images/realisation-2.svg" alt="Terrasse en bois exotique avec salon de jardin" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Terrasse bois exotique</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 45 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 2 semaines</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 9–12 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+
+          <!-- Carte 3 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-3" data-reveal data-reveal-delay="180">
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Éclairage</span>
+              <img src="images/realisation-3.svg" alt="Jardin mis en lumière le soir" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Éclairage d'ambiance</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 500 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 1 semaine</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 4–6 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+
+          <!-- Carte 4 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-4" data-reveal>
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Point d'eau</span>
+              <img src="images/realisation-4.svg" alt="Bassin et point d'eau paysager" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Bassin & point d'eau</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 280 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 6 semaines</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 32–40 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+
+          <!-- Carte 5 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-5" data-reveal data-reveal-delay="90">
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Jardin</span>
+              <img src="images/realisation-5.svg" alt="Jardin méditerranéen avec graviers et oliviers" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Jardin méditerranéen</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 180 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 3 semaines</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 14–18 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+
+          <!-- Carte 6 -->
+          <button class="real-card" data-tilt data-modal="#tpl-real-6" data-reveal data-reveal-delay="180">
+            <span class="real-card__glare" aria-hidden="true"></span>
+            <div class="real-card__media">
+              <span class="real-card__tag">Terrasse</span>
+              <img src="images/realisation-6.svg" alt="Terrasse en pierre naturelle avec pergola" loading="lazy">
+            </div>
+            <div class="real-card__body">
+              <h3>Terrasse pierre naturelle</h3>
+              <div class="real-card__meta">
+                <span><i class="fa-solid fa-ruler-combined"></i> 60 m²</span>
+                <span><i class="fa-solid fa-clock"></i> 3 semaines</span>
+                <span><i class="fa-solid fa-euro-sign"></i> 16–21 k€</span>
+              </div>
+              <span class="real-card__cta">Voir le projet <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </button>
+        </div>
+
+        <div style="text-align:center;margin-top:3rem" data-reveal>
+          <a class="btn btn--dark btn--lg" href="realisations.html">Voir toutes nos réalisations <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROCESSUS ============================ -->
+    <section class="section section--foret" id="processus" aria-label="Notre méthode">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow eyebrow--center">Notre méthode</span>
+          <h2>Un projet serein,<br>de la première visite aux dernières plantations.</h2>
+        </div>
+
+        <div class="process" data-process>
+          <div class="process__track">
+            <span class="process__line" aria-hidden="true"></span>
+            <div class="process__step" data-reveal>
+              <span class="process__num"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="step-tag">Étape 01</span>
+              <h3>Visite du terrain</h3>
+              <p>Nous venons sur place, écoutons vos envies et étudions votre extérieur. Sans engagement.</p>
+            </div>
+            <div class="process__step" data-reveal data-reveal-delay="120">
+              <span class="process__num"><i class="fa-solid fa-pen-ruler"></i></span>
+              <span class="step-tag">Étape 02</span>
+              <h3>Proposition d'aménagement</h3>
+              <p>Vous recevez un plan d'aménagement clair et un devis transparent, pensé pour votre budget.</p>
+            </div>
+            <div class="process__step" data-reveal data-reveal-delay="240">
+              <span class="process__num"><i class="fa-solid fa-trowel"></i></span>
+              <span class="step-tag">Étape 03</span>
+              <h3>Réalisation</h3>
+              <p>Nos équipes transforment votre jardin avec soin, dans le respect des délais annoncés.</p>
+            </div>
+            <div class="process__step" data-reveal data-reveal-delay="360">
+              <span class="process__num"><i class="fa-solid fa-key"></i></span>
+              <span class="step-tag">Étape 04</span>
+              <h3>Livraison clé en main</h3>
+              <p>Nous vous remettons un extérieur prêt à vivre, et restons à vos côtés pour l'entretien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SIMULATEUR ============================ -->
+    <section class="section section--foret simulateur" id="simulateur" aria-label="Simulateur de devis" style="padding-top:0">
+      <div class="container">
+        <div class="simu-wrap">
+          <div class="simu-aside" data-reveal="left">
+            <span class="eyebrow">Devis en ligne</span>
+            <h2>Estimez votre projet<br>en 30 secondes.</h2>
+            <p class="lead" style="color:rgba(247,244,238,.86)">Répondez à quelques questions simples : nous calculons une première fourchette de prix, puis un expert vous rappelle avec un devis détaillé.</p>
+            <ul class="simu-points">
+              <li><i class="fa-solid fa-circle-check"></i> Gratuit et sans engagement</li>
+              <li><i class="fa-solid fa-circle-check"></i> Réponse d'un expert sous 24h</li>
+              <li><i class="fa-solid fa-circle-check"></i> Vos données restent confidentielles</li>
+            </ul>
+          </div>
+
+          <!-- Le contenu de cette carte est généré par script.js à partir de config.js -->
+          <div class="simu-card" id="simulateur-card" data-formspree="[[FORMSPREE_ENDPOINT]]" data-reveal="right">
+            <p style="text-align:center;color:var(--c-encre-2)">Chargement du simulateur…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TÉMOIGNAGES ============================ -->
+    <section class="section section--soft" id="temoignages" aria-label="Avis clients">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow eyebrow--center">Ils nous ont fait confiance</span>
+          <h2>La fierté d'un jardin réussi,<br>racontée par nos clients.</h2>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <div class="carousel__track">
+              <!-- Vidéo témoignage 1 -->
+              <a class="t-video" href="#" aria-label="Lire le témoignage vidéo">
+                <img src="images/temoignage-1.svg" alt="Témoignage vidéo d'un client" loading="lazy">
+                <span class="t-video__name">Famille Martin · [[VILLE]]</span>
+                <span class="t-video__play"><span><i class="fa-solid fa-play"></i></span></span>
+              </a>
+
+              <!-- Avis 1 -->
+              <article class="t-card">
+                <div class="t-card__stars" aria-label="5 étoiles sur 5">★★★★★ <i class="fa-brands fa-google t-card__google"></i></div>
+                <p class="t-card__text">« Un travail remarquable, du premier rendez-vous à la livraison. Notre jardin est méconnaissable, on en profite tous les jours. »</p>
+                <div class="t-card__author">
+                  <img src="images/avatar-1.svg" alt="" loading="lazy">
+                  <span><b>Sophie & David</b><small>[[VILLE]]</small></span>
+                </div>
+              </article>
+
+              <!-- Avis 2 -->
+              <article class="t-card">
+                <div class="t-card__stars" aria-label="5 étoiles sur 5">★★★★★ <i class="fa-brands fa-google t-card__google"></i></div>
+                <p class="t-card__text">« Des artisans à l'écoute, ponctuels et soigneux. Le devis a été respecté à l'euro près. Je recommande les yeux fermés. »</p>
+                <div class="t-card__author">
+                  <img src="images/avatar-2.svg" alt="" loading="lazy">
+                  <span><b>Claire L.</b><small>[[VILLE]]</small></span>
+                </div>
+              </article>
+
+              <!-- Vidéo témoignage 2 -->
+              <a class="t-video" href="#" aria-label="Lire le témoignage vidéo">
+                <img src="images/temoignage-2.svg" alt="Témoignage vidéo d'une cliente" loading="lazy">
+                <span class="t-video__name">M. Rousseau · [[DEPARTEMENT]]</span>
+                <span class="t-video__play"><span><i class="fa-solid fa-play"></i></span></span>
+              </a>
+
+              <!-- Avis 3 -->
+              <article class="t-card">
+                <div class="t-card__stars" aria-label="5 étoiles sur 5">★★★★★ <i class="fa-brands fa-google t-card__google"></i></div>
+                <p class="t-card__text">« Une terrasse magnifique et un éclairage qui change tout le soir. Un vrai savoir-faire et beaucoup de conseils. Merci ! »</p>
+                <div class="t-card__author">
+                  <img src="images/avatar-3.svg" alt="" loading="lazy">
+                  <span><b>Marc R.</b><small>[[VILLE]]</small></span>
+                </div>
+              </article>
+
+              <!-- Vidéo témoignage 3 -->
+              <a class="t-video" href="#" aria-label="Lire le témoignage vidéo">
+                <img src="images/temoignage-3.svg" alt="Témoignage vidéo nocturne" loading="lazy">
+                <span class="t-video__name">Famille Bernard · [[VILLE]]</span>
+                <span class="t-video__play"><span><i class="fa-solid fa-play"></i></span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__btn" data-carousel-prev aria-label="Précédent"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="carousel__dots" data-carousel-dots></div>
+            <button class="carousel__btn" data-carousel-next aria-label="Suivant"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA FINAL ============================ -->
+    <section class="section section--cream cta-final" aria-label="Demander un devis">
+      <div class="container">
+        <div class="cta-band" data-reveal="scale">
+          <div>
+            <span class="eyebrow" style="color:var(--c-or-clair)">Passons à l'action</span>
+            <h2>Recevez votre devis<br>personnalisé sous 24h.</h2>
+            <p class="lead">Décrivez-nous votre projet en quelques mots. Nous vous rappelons rapidement pour en parler — c'est gratuit et sans engagement.</p>
+            <div class="cta-trust">
+              <span><i class="fa-solid fa-shield-heart"></i> [[ANNEES_EXP]] ans d'expérience</span>
+              <span><i class="fa-solid fa-leaf"></i> +[[NB_PROJETS]] jardins créés</span>
+              <span><i class="fa-solid fa-star"></i> [[NOTE_GOOGLE]]/5 sur Google</span>
+            </div>
+          </div>
+
+          <form class="cta-form js-form" action="[[FORMSPREE_ENDPOINT]]" method="POST" novalidate>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis — [[NOM_ENTREPRISE]]">
+            <input type="hidden" name="provenance" value="CTA final (accueil)">
+            <div class="field-row">
+              <div class="field"><label for="cta-prenom">Prénom</label><input id="cta-prenom" name="prénom" required></div>
+              <div class="field"><label for="cta-tel">Téléphone</label><input id="cta-tel" name="téléphone" type="tel" required></div>
+            </div>
+            <div class="field"><label for="cta-msg">Votre projet</label><textarea id="cta-msg" name="message" rows="3" placeholder="Ex. : aménager 200 m² avec terrasse et gazon…" required></textarea></div>
+            <button type="submit" class="btn btn--or btn--block btn--lg"><i class="fa-solid fa-paper-plane"></i> Recevoir mon devis sous 24h</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about-col">
+          <a class="brand" href="index.html">
+            <span class="brand__mark"><i class="fa-solid fa-leaf"></i></span>
+            <span class="brand__name">[[NOM_ENTREPRISE]]</span>
+          </a>
+          <p class="footer__about">[[SLOGAN]] Paysagiste à [[VILLE]], nous créons des jardins et des extérieurs d'exception dans [[ZONE_INTERVENTION]].</p>
+          <div class="footer__social">
+            <a href="[[URL_FACEBOOK]]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="[[URL_INSTAGRAM]]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:[[EMAIL]]" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#processus">Notre méthode</a></li>
+            <li><a href="#simulateur">Devis en ligne</a></li>
+            <li><a href="#temoignages">Avis clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__contact">
+            <li><i class="fa-solid fa-location-dot"></i> <span>[[ADRESSE]]<br>[[CODE_POSTAL]] [[VILLE]]</span></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:[[TELEPHONE_INTL]]">[[TELEPHONE]]</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:[[EMAIL]]">[[EMAIL]]</a></li>
+            <li><i class="fa-solid fa-map"></i> <span>[[ZONE_INTERVENTION]]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> [[NOM_ENTREPRISE]] — Tous droits réservés.</span>
+        <span><a href="contact.html">Mentions légales</a> · Paysagiste à [[VILLE]] ([[DEPARTEMENT]])</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================ MODALE RÉALISATIONS ============================ -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Détail du projet" tabindex="-1">
+    <div class="modal__dialog">
+      <button class="modal__close" aria-label="Fermer la fenêtre"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal__body"></div>
+    </div>
+  </div>
+
+  <!-- ====== Contenus des modales (restent en HTML, clonés au clic) ====== -->
+  <template id="tpl-real-1">
+    <div class="modal__hero"><img src="images/realisation-1.svg" alt="Jardin contemporain vue d'ensemble"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-1.svg" alt="Vue d'ensemble du jardin contemporain">
+      <img src="images/realisation-1-b.svg" alt="Détail des massifs">
+      <img src="images/realisation-1-c.svg" alt="Finitions de la terrasse">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Jardin contemporain</span>
+        <h3 style="margin-top:.4rem">Un jardin épuré pour une maison d'architecte</h3>
+        <p>Création complète sur un terrain nu : terrasse, pelouse, massifs graphiques et éclairage intégré. Un extérieur sobre, durable et facile à vivre.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>320 m²</b></li>
+          <li><span>Durée du chantier</span><b>5 semaines</b></li>
+          <li><span>Budget indicatif</span><b>28 000 € – 34 000 €</b></li>
+          <li><span>Prestations</span><b>Terrasse · Gazon · Éclairage</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« Le résultat dépasse nos attentes. Tout a été pensé dans le détail. »</p>
+        <footer>— Famille Martin, [[VILLE]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <template id="tpl-real-2">
+    <div class="modal__hero"><img src="images/realisation-2.svg" alt="Terrasse bois exotique"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-2.svg" alt="Terrasse en bois exotique">
+      <img src="images/realisation-2-b.svg" alt="Détail des lames de bois">
+      <img src="images/realisation-2-c.svg" alt="Salon de jardin installé">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Terrasse</span>
+        <h3 style="margin-top:.4rem">Une terrasse bois chaleureuse et durable</h3>
+        <p>Remplacement d'une ancienne dalle par une terrasse en bois exotique, avec intégration d'un espace salon et de jardinières sur-mesure.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>45 m²</b></li>
+          <li><span>Durée du chantier</span><b>2 semaines</b></li>
+          <li><span>Budget indicatif</span><b>9 000 € – 12 000 €</b></li>
+          <li><span>Prestations</span><b>Terrasse bois · Jardinières</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« On ne quitte plus la terrasse ! Travail propre et rapide. »</p>
+        <footer>— Claire L., [[VILLE]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <template id="tpl-real-3">
+    <div class="modal__hero"><img src="images/realisation-3.svg" alt="Jardin éclairé le soir"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-3.svg" alt="Jardin mis en lumière">
+      <img src="images/realisation-3-b.svg" alt="Détail d'un spot encastré">
+      <img src="images/realisation-3-c.svg" alt="Allée éclairée">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Éclairage</span>
+        <h3 style="margin-top:.4rem">Mettre le jardin en scène, la nuit tombée</h3>
+        <p>Installation d'un éclairage extérieur basse consommation : balisage des allées, mise en lumière des arbres et de la façade.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>500 m²</b></li>
+          <li><span>Durée du chantier</span><b>1 semaine</b></li>
+          <li><span>Budget indicatif</span><b>4 000 € – 6 000 €</b></li>
+          <li><span>Prestations</span><b>Éclairage LED · Mise en lumière</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« Le soir, le jardin est sublime. Un vrai changement d'ambiance. »</p>
+        <footer>— M. Rousseau, [[DEPARTEMENT]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <template id="tpl-real-4">
+    <div class="modal__hero"><img src="images/realisation-4.svg" alt="Bassin paysager"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-4.svg" alt="Bassin et point d'eau">
+      <img src="images/realisation-4-b.svg" alt="Détail des plantes aquatiques">
+      <img src="images/realisation-4-c.svg" alt="Margelle en pierre">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Point d'eau</span>
+        <h3 style="margin-top:.4rem">Un bassin naturel au cœur du jardin</h3>
+        <p>Création d'un point d'eau paysager avec berges plantées, cascade discrète et éclairage subaquatique. Un coin de fraîcheur et de sérénité.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>280 m²</b></li>
+          <li><span>Durée du chantier</span><b>6 semaines</b></li>
+          <li><span>Budget indicatif</span><b>32 000 € – 40 000 €</b></li>
+          <li><span>Prestations</span><b>Bassin · Plantations · Éclairage</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« Un havre de paix. On entend l'eau depuis la terrasse, c'est magique. »</p>
+        <footer>— Famille Bernard, [[VILLE]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <template id="tpl-real-5">
+    <div class="modal__hero"><img src="images/realisation-5.svg" alt="Jardin méditerranéen"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-5.svg" alt="Jardin méditerranéen">
+      <img src="images/realisation-5-b.svg" alt="Détail des graviers et plantes">
+      <img src="images/realisation-5-c.svg" alt="Oliviers en situation">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Jardin</span>
+        <h3 style="margin-top:.4rem">Un jardin méditerranéen sans entretien</h3>
+        <p>Plantations résistantes à la sécheresse, paillage minéral et oliviers : un jardin graphique, économe en eau et beau toute l'année.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>180 m²</b></li>
+          <li><span>Durée du chantier</span><b>3 semaines</b></li>
+          <li><span>Budget indicatif</span><b>14 000 € – 18 000 €</b></li>
+          <li><span>Prestations</span><b>Plantations · Paillage · Arrosage</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« Magnifique et facile à vivre, exactement ce que nous voulions. »</p>
+        <footer>— Sophie & David, [[VILLE]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <template id="tpl-real-6">
+    <div class="modal__hero"><img src="images/realisation-6.svg" alt="Terrasse en pierre naturelle"></div>
+    <div class="modal__thumbs">
+      <img src="images/realisation-6.svg" alt="Terrasse pierre naturelle">
+      <img src="images/realisation-6-b.svg" alt="Détail du dallage">
+      <img src="images/realisation-6-c.svg" alt="Pergola et plantations">
+    </div>
+    <div class="modal__content">
+      <div class="modal__detail">
+        <span class="eyebrow">Terrasse</span>
+        <h3 style="margin-top:.4rem">Une terrasse en pierre, intemporelle</h3>
+        <p>Dallage en pierre naturelle grand format, pergola bioclimatique et massifs périphériques pour un espace de vie élégant et ombragé.</p>
+        <ul class="modal__specs">
+          <li><span>Surface</span><b>60 m²</b></li>
+          <li><span>Durée du chantier</span><b>3 semaines</b></li>
+          <li><span>Budget indicatif</span><b>16 000 € – 21 000 €</b></li>
+          <li><span>Prestations</span><b>Dallage · Pergola · Massifs</b></li>
+        </ul>
+      </div>
+      <aside class="modal__quote">
+        <div class="t-card__stars">★★★★★</div>
+        <p>« Un travail d'orfèvre. La pierre est superbe et parfaitement posée. »</p>
+        <footer>— Marc R., [[VILLE]]</footer>
+      </aside>
+    </div>
+  </template>
+
+  <!-- Scripts (config en premier : source de vérité du JS) -->
+  <script src="config.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
