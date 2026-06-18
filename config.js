@@ -44,7 +44,7 @@ window.SITE_CONFIG = {
       // Prix de base de l'aménagement, au m² (terrassement, préparation,
       // plantations de base, finitions). Fourchette resserrée (~±13 %)
       // pour une estimation crédible.
-      prixM2: { min: 62, max: 82 }
+      prixM2: { min: 50, max: 66 }
     },
 
     /*
@@ -63,8 +63,8 @@ window.SITE_CONFIG = {
         label: 'Terrasse',
         question: 'Souhaitez-vous une terrasse ?',
         icone: 'fa-solid fa-square',
-        min: 5200,
-        max: 6800,
+        min: 4150,
+        max: 5450,
         aide: 'Bois, pierre naturelle ou dallage grand format.'
       },
       {
@@ -72,8 +72,8 @@ window.SITE_CONFIG = {
         label: 'Gazon / engazonnement',
         question: 'Un gazon parfait fait partie du projet ?',
         icone: 'fa-solid fa-seedling',
-        min: 2600,
-        max: 3400,
+        min: 2100,
+        max: 2700,
         aide: 'Gazon semé ou rouleau, prêt à fouler.'
       },
       {
@@ -81,8 +81,8 @@ window.SITE_CONFIG = {
         label: 'Éclairage extérieur',
         question: 'Voulez-vous un éclairage d’ambiance ?',
         icone: 'fa-solid fa-lightbulb',
-        min: 1700,
-        max: 2300,
+        min: 1350,
+        max: 1850,
         aide: 'Mise en lumière des allées, arbres et façades.'
       },
       {
@@ -90,8 +90,8 @@ window.SITE_CONFIG = {
         label: 'Arrosage automatique',
         question: 'Un arrosage automatique vous intéresse ?',
         icone: 'fa-solid fa-droplet',
-        min: 2250,
-        max: 2950,
+        min: 1800,
+        max: 2350,
         aide: 'Programmé et enterré, pour un jardin sans contrainte.'
       },
       {
@@ -99,8 +99,8 @@ window.SITE_CONFIG = {
         label: 'Piscine / point d’eau',
         question: 'Un point d’eau ou une piscine est prévu ?',
         icone: 'fa-solid fa-water',
-        min: 12000,
-        max: 16000,
+        min: 9600,
+        max: 12800,
         aide: 'Bassin, fontaine ou piscine paysagée intégrée au jardin.'
       }
     ]
