@@ -316,29 +316,34 @@ section { position: relative; }
 }
 .hero__leaves { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
 
-/* Disposition « espace & luxe » : texte + stats en haut, boutons en bas à droite */
+/* Disposition cible : titre/sous-titre centrés en haut ; rangée basse à
+   deux colonnes (stats à gauche, boutons à droite) ; « Découvrir » centré. */
 .hero__inner {
   width: 100%; flex: 1;
   display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem;
-  padding-block: calc(var(--header-h) + clamp(16px, 3vw, 40px)) clamp(40px, 6vw, 76px);
+  padding-block: calc(var(--header-h) + clamp(40px, 7vw, 110px)) clamp(78px, 9vw, 104px);
 }
-.hero__content { max-width: 600px; }
-/* Titre ~25 % plus petit qu'avant, plus aéré */
+/* Haut : titre + sous-titre centrés */
+.hero__top { text-align: center; max-width: 880px; margin-inline: auto; }
 .hero h1 { color: var(--c-creme); text-shadow: 0 4px 30px rgba(0,0,0,.35); font-size: clamp(2rem, 4.6vw, 3.9rem); }
 .hero h1 em { font-style: italic; color: var(--c-or-clair); }
 .hero__sub {
-  margin-top: 1.2rem; max-width: 540px;
+  margin: 1.2rem auto 0; max-width: 600px;
   font-size: clamp(1rem, 1.35vw, 1.15rem); color: rgba(247,244,238,.92);
 }
-/* Boutons empilés verticalement, en bas à droite */
-.hero__actions {
-  align-self: flex-end; display: flex; flex-direction: column; gap: .85rem;
-  width: min(330px, 80%);
+/* Rangée basse : stats (gauche) + boutons (droite), alignés au centre vertical */
+.hero__bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; width: 100%;
 }
+.hero__bottom .reassure { margin-top: 0; }
+/* Boutons empilés verticalement */
+.hero__actions { display: flex; flex-direction: column; gap: .85rem; width: min(330px, 100%); }
 .hero__actions .btn { width: 100%; }
 
+/* Indicateur scroll : centré tout en bas, au-dessus de la rangée basse */
 .hero__scroll {
-  position: absolute; left: var(--gut); bottom: 26px;
+  position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: .5rem;
   color: rgba(247,244,238,.8); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
   z-index: 2;
@@ -895,6 +900,14 @@ body.has-cursor, body.has-cursor * { cursor: none; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__about-col { grid-column: 1 / -1; }
 }
+/* Mobile : rangée basse empilée (stats puis boutons), pleine largeur, centrée */
+@media (max-width: 768px) {
+  .hero__top { max-width: 600px; }
+  .hero__bottom { flex-direction: column; align-items: center; gap: 1.4rem; }
+  .hero__bottom .reassure { width: 100%; max-width: 460px; }
+  .hero__actions { width: 100%; max-width: 460px; }
+}
+
 @media (max-width: 640px) {
   :root { --gut: 22px; }
   .brand__mark { width: 38px; height: 38px; }

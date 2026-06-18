@@ -129,11 +129,14 @@
       <canvas id="hero-leaves" class="hero__leaves" aria-hidden="true"></canvas>
 
       <div class="hero__inner container">
-        <!-- Haut : titre + slogan + réassurance (3 lignes empilées) -->
-        <div class="hero__content">
+        <!-- Haut : titre + sous-titre, centrés -->
+        <div class="hero__top">
           <h1 class="h-display" data-reveal>Transformez votre jardin<br>en un <em>espace d'exception</em>.</h1>
           <p class="hero__sub" data-reveal data-reveal-delay="120">L'art de sublimer vos extérieurs — création de jardins, terrasses et extérieurs sur-mesure à Montgeron et dans le sud-est de l'Essonne.</p>
+        </div>
 
+        <!-- Rangée basse : stats (gauche) + boutons (droite) -->
+        <div class="hero__bottom">
           <!-- Barre de réassurance + compteurs animés -->
           <div class="reassure" data-reveal data-reveal-delay="220">
             <div class="reassure__item">
@@ -158,12 +161,12 @@
               </span>
             </div>
           </div>
-        </div>
 
-        <!-- Bas droite : boutons empilés -->
-        <div class="hero__actions" data-reveal data-reveal-delay="320">
-          <a class="btn btn--or btn--lg" href="#simulateur" data-magnetic="0.2"><i class="fa-solid fa-calculator"></i> Obtenir mon devis gratuit</a>
-          <a class="btn btn--ghost btn--lg" href="#realisations">Voir nos réalisations</a>
+          <!-- Boutons empilés -->
+          <div class="hero__actions" data-reveal data-reveal-delay="320">
+            <a class="btn btn--or btn--lg" href="#simulateur" data-magnetic="0.2"><i class="fa-solid fa-calculator"></i> Obtenir mon devis gratuit</a>
+            <a class="btn btn--ghost btn--lg" href="#realisations">Voir nos réalisations</a>
+          </div>
         </div>
       </div>
 
