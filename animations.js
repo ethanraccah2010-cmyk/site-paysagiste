@@ -227,7 +227,8 @@
   --------------------------------------------------------------------- */
   function initLeaves() {
     const canvas = document.getElementById('hero-leaves');
-    if (!canvas || reduceMotion || CFG.feuilles === false) return;
+    // Désactivé : reduced-motion, config off, tactile ou petit écran (perf/batterie)
+    if (!canvas || reduceMotion || CFG.feuilles === false || isTouch || window.innerWidth < 768) return;
     const ctx = canvas.getContext('2d');
     let w, h, leaves, raf, running = true;
     const COUNT = CFG.feuillesDensite || 14;

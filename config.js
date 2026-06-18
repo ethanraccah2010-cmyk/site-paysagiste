@@ -42,8 +42,9 @@ window.SITE_CONFIG = {
       defaut: 150,
       pas: 10,
       // Prix de base de l'aménagement, au m² (terrassement, préparation,
-      // plantations de base, finitions). Fourchette basse / haute.
-      prixM2: { min: 45, max: 95 }
+      // plantations de base, finitions). Fourchette resserrée (~±13 %)
+      // pour une estimation crédible.
+      prixM2: { min: 62, max: 82 }
     },
 
     /*
@@ -62,8 +63,8 @@ window.SITE_CONFIG = {
         label: 'Terrasse',
         question: 'Souhaitez-vous une terrasse ?',
         icone: 'fa-solid fa-square',
-        min: 3000,
-        max: 9000,
+        min: 5200,
+        max: 6800,
         aide: 'Bois, pierre naturelle ou dallage grand format.'
       },
       {
@@ -71,8 +72,8 @@ window.SITE_CONFIG = {
         label: 'Gazon / engazonnement',
         question: 'Un gazon parfait fait partie du projet ?',
         icone: 'fa-solid fa-seedling',
-        min: 1500,
-        max: 5000,
+        min: 2600,
+        max: 3400,
         aide: 'Gazon semé ou rouleau, prêt à fouler.'
       },
       {
@@ -80,8 +81,8 @@ window.SITE_CONFIG = {
         label: 'Éclairage extérieur',
         question: 'Voulez-vous un éclairage d’ambiance ?',
         icone: 'fa-solid fa-lightbulb',
-        min: 900,
-        max: 3500,
+        min: 1700,
+        max: 2300,
         aide: 'Mise en lumière des allées, arbres et façades.'
       },
       {
@@ -89,8 +90,8 @@ window.SITE_CONFIG = {
         label: 'Arrosage automatique',
         question: 'Un arrosage automatique vous intéresse ?',
         icone: 'fa-solid fa-droplet',
-        min: 1200,
-        max: 4000,
+        min: 2250,
+        max: 2950,
         aide: 'Programmé et enterré, pour un jardin sans contrainte.'
       },
       {
@@ -98,8 +99,8 @@ window.SITE_CONFIG = {
         label: 'Piscine / point d’eau',
         question: 'Un point d’eau ou une piscine est prévu ?',
         icone: 'fa-solid fa-water',
-        min: 6000,
-        max: 25000,
+        min: 12000,
+        max: 16000,
         aide: 'Bassin, fontaine ou piscine paysagée intégrée au jardin.'
       }
     ]
@@ -137,6 +138,6 @@ window.SITE_CONFIG = {
     parallaxIntensite: 0.18, // force du parallax (0 = aucun, 0.3 = fort)
     countUpDuree: 1600,  // durée des compteurs animés (ms)
     feuilles: true,      // particules de feuilles dans le hero (true/false)
-    feuillesDensite: 14  // nombre de feuilles flottantes simultanées
+    feuillesDensite: 9   // nombre de feuilles (volontairement limité = perf/batterie)
   }
 };
