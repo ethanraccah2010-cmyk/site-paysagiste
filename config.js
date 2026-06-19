@@ -113,18 +113,18 @@ window.SITE_CONFIG = {
      SEO local léger). Remplacez par les communes réelles du client.
   */
   zones: [
-    'Évry-Courcouronnes',
-    'Massy',
-    'Palaiseau',
-    'Savigny-sur-Orge',
-    'Brunoy',
-    'Yerres',
-    'Montgeron',
-    'Draveil',
-    'Corbeil-Essonnes',
-    'Athis-Mons',
-    'Longjumeau',
-    'Sud de Paris'
+    'Chaumes-en-Brie',
+    'Mormant',
+    'Guignes',
+    'Fontenay-Trésigny',
+    'Tournan-en-Brie',
+    'Verneuil-l\'Étang',
+    'Coubert',
+    'Yèbles',
+    'Andrezel',
+    'Ozouer-le-Voulgis',
+    'Brie-Comte-Robert',
+    'Est de la Seine-et-Marne'
   ],
 
   /* ----------------------------------------------------------------------
